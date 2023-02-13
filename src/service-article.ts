@@ -5,6 +5,12 @@ import { Article } from "./entities";
 
 export async function fetchAllArticles() {
 
-    const response = await axios.get<Article[]>("http://localhost:8000/api/article");
+    const response = await axios.get<Article[]>(`http://localhost:8000/api/article`);
+    return response.data;
+}
+
+export async function fetchOneArticle(id:any) {
+
+    const response = await axios.get<Article>(`http://localhost:8000/api/article/${id}`);
     return response.data;
 }
