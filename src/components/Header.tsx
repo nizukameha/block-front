@@ -3,7 +3,7 @@ export default function Header() {
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
+                    <a className="navbar-brand" href="/">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR18peHh8_KGf71RYF-BuisiG39M3LLI9PNlg&usqp=CAU" alt="Logo" width="30" height="30" className="d-inline-block align-text-center me-3" />
                         BlogBoard
                     </a>
@@ -13,7 +13,7 @@ export default function Header() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Accueil</a>
+                                <a className="nav-link active" aria-current="page" href="/">Accueil</a>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
