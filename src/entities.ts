@@ -4,6 +4,6 @@ export interface Article {
     text:string;
     author:string;
     view:number;
-    publication_date:string;
+    publicationDate:string;
     image:string;
 }
