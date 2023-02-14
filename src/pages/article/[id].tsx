@@ -19,7 +19,7 @@ export default function OneArticle() {
                 setArticle(data);
               })
         }
-      }, [router.query.id])
+    }, [router.query.id])
 
     //Pendant que useEffect récupere l'id, un spinner s'affiche
     if(!article) {
