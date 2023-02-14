@@ -32,3 +32,9 @@ export async function updateArticle(article:Article) {
     const response = await axios.put(`http://localhost:8000/api/article/${article.id}`, article);
     return response.data;
 }
+
+export async function fetchTitle(title:string) {
+
+    const response = await axios.get(`http://localhost:8000/api/article/find/${title}`);
+    return response.data;
+}
