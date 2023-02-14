@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { fetchAllArticles } from "@/service-article";
 import { Article } from "@/entities";
 import DisplayArticle from "@/components/DisplayArticle";
-import { useRouter } from "next/router";
 import AddBtn from "@/components/AddBtn";
 import SearchBar from "@/components/SearchBar";
 
@@ -22,6 +21,7 @@ export default function Index() {
     <>
     <div className="container-fluid">
     <div className="row">
+      <h1 className="text-center mt-5">Les derniers articles</h1>
       <div className="col-12 d-flex flex-row justify-content-around align-items-center mt-5 mb-5">
         <AddBtn/>
         <SearchBar/>
