@@ -4,6 +4,7 @@ import { AddOneArticle } from "@/service-article";
 import { FormEvent } from "react";
 import dateFormat from "dateformat";
 import { useRouter } from "next/router";
+import { updateArticle } from "@/service-article";
 
 
 interface Props {
@@ -42,9 +43,13 @@ export default function ArticleForm({article:articleProps}:Props) {
     async function handleSubmit(event:FormEvent) {
         event.preventDefault();
 
-        const added = await AddOneArticle(article)
-
-        router.push('/article/'+added.id);
+        if (articleProps) {
+            const updated = await updateArticle(article)
+            router.push('/article/'+updated.id);
+        } else {
+            const added = await AddOneArticle(article)
+            router.push('/article/'+added.id);
+        }
 
     }
 
