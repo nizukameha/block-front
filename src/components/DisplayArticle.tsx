@@ -11,8 +11,8 @@ export default function DisplayArticle({ article }: Props) {
 
     return (
         <>
-            <div className="col-12 col-md-3 m-5 d-flex flex-column align-items-center">
-                <h1 className="text-center">{article.title}</h1>
+            <div className="col-10 col-md-3 m-5 d-flex flex-column align-items-center">
+                <h2 className="text-center">{article.title}</h2>
                 <Link href={`/article/${article.id}`}>
                     <img className="mt-3" src={article.image} style={{ width: "100%" }} alt="illustration" />
                 </Link>
