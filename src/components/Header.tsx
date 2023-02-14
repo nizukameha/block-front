@@ -21,8 +21,10 @@ export default function Header() {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li><a className="dropdown-item" href="#">Actualité</a></li>
-                                    <li><a className="dropdown-item" href="#">Évenements</a></li>
                                     <li><a className="dropdown-item" href="#">Jeux-vidéos</a></li>
+                                    <li><a className="dropdown-item" href="#">Compétitions</a></li>
+                                    <li><a className="dropdown-item" href="#">Astuce</a></li>
+                                    <li><a className="dropdown-item" href="#">Évenement</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
