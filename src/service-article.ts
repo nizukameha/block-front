@@ -20,3 +20,9 @@ export async function AddOneArticle(article:Article) {
     const response = await axios.post<Article>(`http://localhost:8000/api/article`, article);
     return response.data;
 }
+
+export async function DeleteArticle(id:any) {
+
+    const response = await axios.delete(`http://localhost:8000/api/article/${id}`);
+    return response.data;
+}
