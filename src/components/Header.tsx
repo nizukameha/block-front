@@ -32,6 +32,7 @@ export default function Header() {
                     </div>
                 </div>
             </nav>
+            <hr className="mt-0" />
         </>
     );
 }
