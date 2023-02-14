@@ -3,6 +3,8 @@ import { fetchAllArticles } from "@/service-article";
 import { Article } from "@/entities";
 import DisplayArticle from "@/components/DisplayArticle";
 import { useRouter } from "next/router";
+import AddBtn from "@/components/AddBtn";
+import SearchBar from "@/components/SearchBar";
 
 
 export default function Index() {
@@ -19,6 +21,12 @@ export default function Index() {
   return (
     <>
     <div className="container-fluid">
+    <div className="row">
+      <div className="col-12 d-flex flex-row justify-content-around align-items-center mt-5 mb-5">
+        <AddBtn/>
+        <SearchBar/>
+      </div>
+    </div>
       <div className="row">
         <div className="d-flex flex-wrap flex-row justify-content-center">
           {articles.map((item) =>
