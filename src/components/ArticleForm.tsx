@@ -18,7 +18,7 @@ interface Props {
 export default function ArticleForm({article:articleProps}:Props) {
 
     const router = useRouter();
-    const dateNow = new Date()
+    const dateNow = new Date();
     // J'utilise ça pour formater la date au meme format que celui de la base de donnée
     const pDate = dateFormat(dateNow, "yyyy/mm/dd/")
     //Si on a un un articleProps cela signifit qu'on veut modifier un article donc le formulaire et la requete seront différents
