@@ -7,3 +7,11 @@ export interface Article {
     publicationDate:string;
     image:string;
 }
+
+export interface Comments {
+    id?:number;
+    name:string;
+    text:string;
+    publicationDate:string;
+    idArticle:number;
+}
