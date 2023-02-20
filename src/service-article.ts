@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Article } from "./entities";
+import { Article, Comments } from "./entities";
 
 //On met dans ce fichier toutes les requetes du CRUD
 
@@ -36,5 +36,23 @@ export async function updateArticle(article:Article) {
 export async function fetchTitle(title:string) {
 
     const response = await axios.get(`http://localhost:8000/api/article/find/${title}`);
+    return response.data;
+}
+
+export async function fetchAllComments() {
+
+    const response = await axios.get<Comments[]>(`http://localhost:8000/api/comment`);
+    return response.data;
+}
+
+export async function DeleteComments(id:any) {
+
+    const response = await axios.delete(`http://localhost:8000/api/comment/${id}`);
+    return response.data;
+}
+
+export async function AddOneComment(comment:Comments) {
+
+    const response = await axios.post<Comments>(`http://localhost:8000/api/comment`, comment);
     return response.data;
 }
